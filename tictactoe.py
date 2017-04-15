@@ -49,6 +49,10 @@ def chooseNextPosition():
         return 7
     elif board[0] == "x" and board[4] == "o" and board[8] == "x" and board[1] != "o" and board[1] != "x" or board[2] == "x" and board[4] == "o" and board[6] == "x" and board[1] != "o" and board[1] != "x":
         return 1
+    elif board[4] == "x" and board[2] != "o" and board[2] != "x":
+        return 2
+    elif checkTwo("x", 4, 6) and board[2] == "o" and board[0] != "o" and board[0] != "x":
+        return 0
     elif checkTwo("o", 0, 1) and board[2] != "o" and board[2] != "x":
         return 2
     elif checkTwo("o", 1, 2) and board[0] != "o" and board[0] != "x":
