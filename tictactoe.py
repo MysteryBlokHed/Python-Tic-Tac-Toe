@@ -45,14 +45,6 @@ def checkAll(char):
 def chooseNextPosition():
     if board[4] != "o" and board[4] != "x":
         return 4
-    elif board[0] == "x" and board[4] == "o" and board[8] == "x" and board[7] != "o" and board[7] != "x" or board[2] == "x" and board[4] == "o" and board[6] == "x" and board[7] != "o" and board[7] != "x":
-        return 7
-    elif board[0] == "x" and board[4] == "o" and board[8] == "x" and board[1] != "o" and board[1] != "x" or board[2] == "x" and board[4] == "o" and board[6] == "x" and board[1] != "o" and board[1] != "x":
-        return 1
-    elif board[4] == "x" and board[2] != "o" and board[2] != "x":
-        return 2
-    elif checkTwo("x", 4, 6) and board[2] == "o" and board[0] != "o" and board[0] != "x":
-        return 0
     elif checkTwo("o", 0, 1) and board[2] != "o" and board[2] != "x":
         return 2
     elif checkTwo("o", 1, 2) and board[0] != "o" and board[0] != "x":
@@ -101,6 +93,22 @@ def chooseNextPosition():
         return 2
     elif checkTwo("o", 2, 6) and board[4] != "o" and board[4] != "x":
         return 4
+    elif board[0] == "x" and board[4] == "o" and board[8] == "x" and board[7] != "o" and board[7] != "x" or board[2] == "x" and board[4] == "o" and board[6] == "x" and board[7] != "o" and board[7] != "x":
+        return 7
+    elif board[0] == "x" and board[4] == "o" and board[8] == "x" and board[1] != "o" and board[1] != "x" or board[2] == "x" and board[4] == "o" and board[6] == "x" and board[1] != "o" and board[1] != "x":
+        return 1
+    elif board[4] == "x" and board[2] != "o" and board[2] != "x":
+        return 2
+    elif checkTwo("x", 4, 6) and board[2] == "o" and board[0] != "o" and board[0] != "x":
+        return 0
+    elif checkTwo("x", 7, 5) and board[8] != "o" and board[8] != "x":
+        return 8
+    elif checkTwo("x", 3, 7) and board[6] != "o" and board[6] != "x":
+        return 6
+    elif checkTwo("x", 1, 3) and board[0] != "o" and board[0] != "x":
+        return 0
+    elif checkTwo("x", 1, 5) and board[2] != "o" and board[2] != "x":
+        return 2
     elif checkTwo("x", 0, 1) and board[2] != "o" and board[2] != "x":
         return 2
     elif checkTwo("x", 1, 2) and board[0] != "o" and board[0] != "x":
